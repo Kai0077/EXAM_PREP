@@ -1,0 +1,12 @@
+{
+    "name": "kaitsvetkov/5",
+    "authors": [
+        {
+            "name": "KaiSej007",
+            "email": "kailyubo@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^12.1"
+    }
+}
