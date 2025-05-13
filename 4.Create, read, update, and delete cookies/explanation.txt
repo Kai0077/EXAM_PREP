@@ -1,0 +1,23 @@
+Explanation
+	1.	setcookie(name, value, expire)
+	•	Sends an HTTP header telling the browser to store a cookie.
+	•	Must occur before any HTML is output.
+
+	2.	$_COOKIE
+	•	Holds all cookies sent back by the browser.
+	•	Note: newly set cookies become available on the next page load.
+
+	3.	Expiration
+	•	time() + 3600 sets the cookie to live for one hour.
+	•	To delete, set expire to a timestamp in the past.
+
+	4.	Use Cases & Caveats
+	•	Good for “remember me” features, UI preferences, or non-sensitive tracking.
+	•	Stored client-side—users can view/modify unless you use HTTP-only flags.
+
+
+cookie_example.php
+Here, cookies are managed through HTTP headers sent by the script. First, setcookie() creates a cookie named ‘user’ with the value “John” that 
+will expire in one hour. On the next request, $_COOKIE['user'] can be read to retrieve that value. The script then overwrites the cookie 
+with “Jane” by calling setcookie() again, and finally deletes it by setting its expiration time to a moment in the past. Cookies travel with 
+every request and response, making them useful for remembering user preferences or simple tokens.

@@ -1,0 +1,6 @@
+form.php
+This script begins by checking whether the current request arrived via POST by examining $_SERVER['REQUEST_METHOD']. 
+If it is a POST, it safely retrieves the ‘name’ and ‘email’ fields from $_POST, sanitizes them with htmlspecialchars() 
+to strip out any malicious HTML or scripts, and then prints a friendly greeting using those values. If the form has not 
+yet been submitted, the HTML form is rendered, and the required attributes ensure the browser enforces basic input validation 
+before allowing submission.

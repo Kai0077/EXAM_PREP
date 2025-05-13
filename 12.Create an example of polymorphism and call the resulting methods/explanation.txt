@@ -1,0 +1,5 @@
+polymorphism.php
+Using an abstract base class Animal with an abstract speak() method, this example requires every subclass (such as Cat and Dog) to 
+implement its own version of speak(). An array is constructed containing a Cat instance and a Dog instance, and a loop calls speak() on 
+each object. This demonstrates polymorphism: you can treat different objects through the same interface (Animal), yet each one behaves 
+according to its specific implementation.

@@ -1,0 +1,5 @@
+pdo_query.php
+In this file, a PDO connection is opened to a MySQL database called testdb on the local machine, and error mode is set to throw exceptions so 
+that database problems don’t fail silently. A SQL statement with a named placeholder (:id) is prepared to safely accept user input without 
+risking SQL injection. When execute() is called with ['id' => 1], the placeholder is bound to the value 1 and the query runs, and then fetch() 
+pulls back the first matching row as an associative array. Finally, the script echoes the name column from that result.

@@ -1,0 +1,27 @@
+Explanation
+	1.	Why Unit Tests?
+	•	Automatically verify that individual units of code work as expected.
+	•	Saves time by catching regressions early.
+
+	2.	TestCase & Assertions
+	•	TestCase provides methods like assertEquals(expected, actual).
+	•	If the assertion fails, PHPUnit reports which test and why.
+
+	3.	Autoloading
+	•	vendor/autoload.php (from Composer) loads PHPUnit and any other dependencies.
+	•	Ensures classes are available without manual require for every file.
+
+	4.	Running Tests
+	•	From your project root: ./vendor/bin/phpunit CalculatorTest.php
+
+
+  Calculator.php
+This class defines a Calculator object with a single public method add(), which accepts two numbers as arguments and returns their sum. 
+By encapsulating addition logic in its own class and method, the code becomes modular and testable, allowing this simple arithmetic operation 
+to be verified and reused in isolation from other application logic.
+
+CalculatorTest.php
+Using PHPUnit, this test file first includes Composer’s autoloader so that PHPUnit’s classes are available, then loads Calculator.php. 
+It imports PHPUnit\Framework\TestCase so the test class can extend it, and defines a testAdd() method that instantiates the Calculator, 
+calls add(2, 2), and asserts that the result is 4. Running this test automatically verifies that the add() method behaves as expected, catching 
+regressions if the code is ever modified.

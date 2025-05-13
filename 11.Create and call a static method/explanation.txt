@@ -1,0 +1,4 @@
+static.php
+Here, the Math class contains a static method square() that computes the square of a given number. Since the method 
+is declared static, you can call it directly via Math::square(5) without needing to instantiate the class. Static methods 
+are perfect for stateless utility functions that don’t require object-specific data.

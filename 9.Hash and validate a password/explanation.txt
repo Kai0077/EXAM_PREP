@@ -1,0 +1,5 @@
+password.php
+To protect user passwords, this file first hashes a plaintext password ("secret123") using password_hash() with the default 
+secure algorithm (currently bcrypt). When verifying a login, it calls password_verify() with the user’s provided password and the 
+stored hash; if they match, it prints confirmation. This approach ensures raw passwords are never stored or compared directly, greatly 
+reducing the risk of credential theft.

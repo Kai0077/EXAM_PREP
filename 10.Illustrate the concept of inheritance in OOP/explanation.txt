@@ -1,0 +1,5 @@
+inheritance.php
+Demonstrating basic object‐oriented inheritance, this code defines a parent class Animal with a generic speak() method. The 
+Dog subclass uses the extends keyword to inherit from Animal and overrides speak() to return "Bark". When a Dog object is 
+instantiated and its speak() method is called, it executes the subclass’s version, showing how child classes can inherit and 
+customize parent behavior.

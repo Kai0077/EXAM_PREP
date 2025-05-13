@@ -1,0 +1,21 @@
+Explanation
+	1.	try { … } catch (ExceptionType $e) { … }
+	•	Run the code in try. If an exception of the specified type is thrown, control passes to catch.
+
+	2.	PDOException
+	•	Thrown by PDO when a database operation fails (e.g. wrong credentials or host).
+
+	3.	getMessage()
+	•	Retrieves the human-readable error message.
+	•	Always handle exceptions gracefully to avoid exposing sensitive details in production.
+
+	4.	Best Practices
+	•	Catch only the exceptions you expect.
+	•	Log errors to a file or monitoring system instead of echoing in production.
+
+
+  error_handling.php
+In order to handle potential database connection errors gracefully, this code wraps the PDO constructor in a try block. 
+If the connection fails—for example, due to incorrect credentials or an unreachable host—a PDOException is thrown and caught
+by the catch block, which then echoes a brief error message from $e->getMessage(). This ensures the script does not crash abruptly 
+and provides informative feedback about what went wrong.

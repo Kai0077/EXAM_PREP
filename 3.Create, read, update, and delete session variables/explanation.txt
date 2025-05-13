@@ -1,0 +1,5 @@
+session_example.php
+This example starts by calling session_start(), which either creates a new session or resumes an existing one on the server. 
+It then demonstrates writing to $_SESSION by storing the string “John” under the key ‘username’, reading that value back to display it, 
+updating it to “Jane,” and eventually calling unset() to remove it entirely. Because session data lives on the server, it persists across 
+multiple page loads for the same user until the session expires or is destroyed.

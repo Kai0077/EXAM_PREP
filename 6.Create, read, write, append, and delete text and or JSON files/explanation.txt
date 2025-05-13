@@ -1,0 +1,21 @@
+Explanation
+	1.	file_put_contents() / file_get_contents()
+	•	Handy wrappers around lower-level file functions (fopen, fread, fwrite).
+	•	FILE_APPEND flag adds to existing content instead of replacing it.
+
+	2.	unlink()
+	•	Deletes the specified file from the filesystem.
+
+	3.	JSON Handling
+	•	json_encode() converts a PHP array/object into a JSON string.
+	•	json_decode(..., true) parses JSON back into a PHP associative array.
+
+	4.	Use Cases
+	•	Flat-file storage for simple data, logs, or configuration.
+	•	Lightweight alternative when a full database isn’t needed.
+
+  file_operations.php
+This script illustrates basic file I/O and JSON handling. It writes the string “Hello” to file.txt, reads and echoes its contents, 
+appends “\nWorld” to the same file, and then deletes it with unlink(). It then shows JSON serialization by encoding an associative 
+array with a name key into data.json, reading that file back, decoding it into a PHP array, and echoing the name value. Together, these 
+operations demonstrate how to store and retrieve both plain text and structured JSON data without a database.

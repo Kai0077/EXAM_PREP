@@ -1,0 +1,17 @@
+Explanation
+	1.	header('Content-Type: application/json')
+	•	Informs the client (browser or app) that the response body is JSON, not HTML.
+
+	2.	json_encode()
+	•	Converts PHP arrays or objects into a JSON-formatted string.
+
+	3.	Use Cases
+	•	Backend API endpoints consumed by JavaScript apps, mobile apps, or other services.
+	•	Always set appropriate CORS headers if serving cross-domain.
+
+
+  api.php
+This minimal API endpoint begins by sending an HTTP header to declare that the response will be JSON (application/json). 
+It then defines a PHP array with a status and user, converts it into a JSON-formatted string using json_encode(), and echoes 
+that string. Front‐end applications or other clients can fetch this URL, parse the JSON, and use the data programmatically, cleanly 
+separating backend logic from presentation.
