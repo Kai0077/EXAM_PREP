@@ -3,14 +3,15 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $name = htmlspecialchars($_POST['name'] ?? '');
   $email = htmlspecialchars($_POST['email'] ?? '');
-  echo("Hey $name your email is $email.");
+  echo "Name: {$name}, Email: {$email}";
 }
 
 ?>
 
 <form method="POST">
-  Name: <input type="text" name="name">
-  Email: <input type="email" name="email">
+  <label for="name">name</label>
+  <input type="text" name="name" required>
+  <label for="email">name</label>
+  <input type="text" name="email" required>
   <button type="submit">Submit</button>
-
 </form>

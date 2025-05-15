@@ -8,4 +8,3 @@ $user = $stmt->fetch();
 
 echo $user['name'];
 ?>
-
